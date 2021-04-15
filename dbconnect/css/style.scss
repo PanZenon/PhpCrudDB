@@ -1,0 +1,128 @@
+$background: linear-gradient(to right, #232526, #414345);
+* {
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+body {
+	background: $background;
+}
+h1 {
+	font-size: 2em;
+	text-align: center;
+	color: white;
+	margin-top: 10px;
+	animation: 2s linear 0s infinite alternate shining;
+}
+@keyframes shining {
+	0% {
+		text-shadow: 0 0 5px rgb(180, 231, 150), 0 0 15px rgb(180, 231, 150),
+			0 0 20px rgb(180, 231, 150), 0 0 40px rgb(180, 231, 150);
+	}
+	100% {
+		text-shadow: none;
+	}
+}
+.option {
+	width: 125px;
+	height: 25px;
+	padding-bottom: 5px;
+	margin: 25px auto;
+	text-align: center;
+	cursor: pointer;
+	color: white;
+	font-size: 1.1em;
+}
+.option::after {
+	content: "";
+	display: block;
+	width: 0px;
+	height: 2px;
+	background-color: rgb(180, 231, 150);
+	margin-left: auto;
+	margin-right: auto;
+	transition: width 0.3s;
+	box-shadow: 10px 13px 153px 0px rgb(180, 231, 150);
+}
+.option:hover::after {
+	width: 100%;
+}
+.addNew {
+	margin-top: 150px;
+}
+.menu {
+	width: 50vw;
+	min-height: 50vh;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.list {
+	width: 50vw;
+	min-height: 50vh;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 100px;
+}
+.list h2 {
+	text-align: center;
+}
+.user {
+	width: 550px;
+	height: 30px;
+	padding-top: 10px;
+	border: 1px solid white;
+	margin: 10px auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	text-align: center;
+}
+.addNewContent {
+	width: min-content;
+	min-height: 50vh;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 150px;
+	text-align: center;
+}
+.addNewContent div {
+	margin: 15px auto;
+}
+.addNewContent input {
+	color: #303030;
+	border-radius: 15px;
+	outline: none;
+	text-align: center;
+	height: 14px;
+	padding: 2px;
+}
+#submit {
+	height: 20px;
+	padding: 1px;
+	width: 125px;
+}
+.hidden {
+	display: none;
+}
+.fa-times {
+	color: red;
+	transition: 0.2s all ease-in-out;
+	cursor: pointer;
+}
+.fa-times:hover {
+	color: rgb(255, 77, 77);
+}
+a {
+	text-decoration: none;
+}
+.mainPage {
+	margin-top: 200px;
+}
+.fa-edit {
+	transition: 0.2s all ease-in-out;
+}
+.fa-edit:hover {
+	color: rgb(189, 189, 189);
+}
