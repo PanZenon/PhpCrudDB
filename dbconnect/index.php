@@ -17,6 +17,7 @@
     <container class="menu">
         <div class="option addNew">Add new</div>
         <div class="option showList">Show List</div>
+        <a target="_blank" href="https://github.com/PanZenon/PhpCrudDB"><div class="option github"><i class="fab fa-github"></i></div></a>
     </container>
     
     <container class="addNewContent hidden">
