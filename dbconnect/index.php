@@ -48,11 +48,24 @@
             <div class="id">Id</div>
             <div class="surname">Surname</div>
             <div class="position">Position</div>
-            <div class="salary">Salary</div>
+            <div class="salary">Salary <?php 
+            if(isset($_GET["sort"])){
+              if($_GET["sort"] == "true"){
+                echo'<a href="index.php?sort=false"><i class="fas fa-sort"></i></a>';
+              }
+              else{
+                echo'<a href="index.php?sort=true"><i class="fas fa-sort"></i></a>';
+              }
+            }
+            else{
+              echo'<a href="index.php?sort=true"><i class="fas fa-sort"></i></a>';
+            }
+            ?></div>
             <div class="delete">Delete</div>
             <div class="edit">Edit</div>
         </div>
      <?php
+    $sort = 'false';
     if (isset($_POST['submit'])) {
         $surname = $_POST['surname'];
         $position = $_POST['position'];
@@ -64,7 +77,13 @@
             header("Location: addnew.php?surname={$surname}&position={$position}&salary={$salary}");
         }
       }
+      if(isset($_GET['sort'])){
+        $sort = $_GET['sort'];
+      }
       $sql = "Select * from users";
+      if($sort=='true'){
+        $sql = $sql." order by Salary desc";
+      }
       $result = $conn->query($sql);
       while($row = $result->fetch_assoc()) {
         echo "<div class='user'>
@@ -72,8 +91,8 @@
             <div class='surname'>{$row['Surname']}</div>
             <div class='position'>{$row['Position']}</div>
             <div class='salary'>{$row['Salary']}</div>
-            <div class='delete'><a href='delete.php?id={$row['Id']}'><i class='fas fa-times'></i></a></div>
-            <div class='edit'><a href='edit.php?id={$row['Id']}&surname={$row['Surname']}&position={$row['Position']}&salary={$row['Salary']}'><i class='fas fa-edit'></i></a></div>
+            <div class='delete'><a href='delete.php?id={$row['Id']}&sort={$sort}'><i class='fas fa-times'></i></a></div>
+            <div class='edit'><a href='edit.php?id={$row['Id']}&surname={$row['Surname']}&position={$row['Position']}&salary={$row['Salary']}&sort={$sort}'><i class='fas fa-edit'></i></a></div>
         </div>";
       }
     ?>

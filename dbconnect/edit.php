@@ -43,7 +43,7 @@
     var_dump($surname);
     $sql = "UPDATE users Set Surname ='{$surname}', Position='{$position}', Salary={$salary} WHERE Id = {$id}";
     $conn->query($sql);
-    header("Location: index.php");
+    header("Location: index.php?sort={$_GET['sort']}");
   }
     ?>
     <a href="index.php"><div class="option mainPage" href='index.php'><i class="fas fa-undo-alt"></i> Back</div></a>

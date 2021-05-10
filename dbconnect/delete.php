@@ -14,7 +14,7 @@
     $id = $_GET['id'];
     $sql = "DELETE FROM users WHERE Id = {$id}";
     $conn->query($sql);
-    header("Location: index.php");
+    header("Location: index.php?sort={$_GET['sort']}");
     ?>
 </body>
 </html>

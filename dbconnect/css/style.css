@@ -169,4 +169,14 @@ a {
 .fa-github {
   font-size: 1.2em;
 }
+
+.fa-sort {
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+  cursor: pointer;
+}
+
+.fa-sort:hover {
+  color: #b4e796;
+}
 /*# sourceMappingURL=style.css.map */
