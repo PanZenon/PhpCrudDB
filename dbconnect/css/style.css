@@ -78,7 +78,7 @@ h1 {
 }
 
 .list {
-  width: 50vw;
+  width: 60vw;
   min-height: 50vh;
   margin-left: auto;
   margin-right: auto;
@@ -90,17 +90,28 @@ h1 {
   text-align: center;
 }
 
-.user {
-  width: 550px;
+.elem {
+  width: 700px;
   height: 30px;
   padding-top: 10px;
   border: 1px solid white;
   margin: 10px auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   text-align: center;
+}
+
+.position {
+  -ms-grid-columns: 1fr 1fr 2fr;
+      grid-template-columns: 1fr 1fr 2fr;
+}
+
+.fullDesc {
+  width: 800px;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
 }
 
 .addNewContent {
@@ -126,6 +137,19 @@ h1 {
   text-align: center;
   height: 14px;
   padding: 2px;
+}
+
+select {
+  color: #303030;
+  border-radius: 15px;
+  outline: none;
+  height: 20px;
+  width: 180px;
+  text-align: center;
+}
+
+option {
+  color: #303030;
 }
 
 #submit {
@@ -178,5 +202,15 @@ a {
 
 .fa-sort:hover {
   color: #b4e796;
+}
+
+.fa-info-circle {
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+  color: #8484ff;
+}
+
+.fa-info-circle:hover {
+  color: #5c5cff;
 }
 /*# sourceMappingURL=style.css.map */

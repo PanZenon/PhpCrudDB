@@ -58,7 +58,7 @@ h1 {
   display: block;
 }
 .list {
-  width: 50vw;
+  width: 60vw;
   min-height: 50vh;
   margin-left: auto;
   margin-right: auto;
@@ -68,15 +68,22 @@ h1 {
 .list h2 {
   text-align: center;
 }
-.user {
-  width: 550px;
+.elem {
+  width: 700px;
   height: 30px;
   padding-top: 10px;
   border: 1px solid white;
   margin: 10px auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   text-align: center;
+}
+.position {
+  grid-template-columns: 1fr 1fr 2fr;
+}
+.fullDesc {
+  width: 800px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
 }
 .addNewContent {
   width: min-content;
@@ -97,6 +104,17 @@ h1 {
   text-align: center;
   height: 14px;
   padding: 2px;
+}
+select {
+  color: #303030;
+  border-radius: 15px;
+  outline: none;
+  height: 20px;
+  width: 180px;
+  text-align: center;
+}
+option {
+  color: #303030;
 }
 #submit {
   height: 20px;
@@ -135,4 +153,11 @@ a {
 }
 .fa-sort:hover {
   color: rgb(180, 231, 150);
+}
+.fa-info-circle {
+  transition: 0.2s all ease-in-out;
+  color: rgb(132, 132, 255);
+}
+.fa-info-circle:hover {
+  color: rgb(92, 92, 255);
 }

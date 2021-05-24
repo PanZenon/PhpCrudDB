@@ -3,11 +3,19 @@ $(window).on('load', ()=>{
     toggleList($(".backList"))
     toggleAddNewContent($(".addNew"))
     toggleAddNewContent($(".backaddNew"))
+    toggleListPositions($(".showPositions"))
+    toggleListPositions($(".backListPositions"))
 })
 
 function toggleList(elem){
     $(elem).click(()=>{
-        $(".list").toggleClass('hidden')
+        $(".listUsers").toggleClass('hidden')
+        $(".menu").toggleClass('hidden')
+    })
+}
+function toggleListPositions(elem){
+    $(elem).click(()=>{
+        $(".listPositions").toggleClass('hidden')
         $(".menu").toggleClass('hidden')
     })
 }
